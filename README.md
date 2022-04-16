@@ -1,17 +1,17 @@
-# Practicas de interface web
+## practice de interface web
 
-## TP1Antipatron
-### 
+### TP1Antipatron
+#### 
+-
+
+### TP2JSPDAO
+####
 - 
 
-## TP2JSPDAO
-###
+### TP3JSFDAO
+#### 
 - 
 
-## TP3JSFDAO
-### 
-- 
-
-## TP4PrimeFaces
-###
+### TP4PrimeFaces
+####
 - 
