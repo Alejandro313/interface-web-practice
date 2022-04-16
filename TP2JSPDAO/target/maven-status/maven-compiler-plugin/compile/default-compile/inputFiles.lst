@@ -1,0 +1,17 @@
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\interfaces\test\TestConnector.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\enums\TipoDocumento.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\entities\ClienteDireccion.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\entities\Articulo.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\entities\Cliente.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\interfaces\connectors\Connector.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\repositories\interfaces\I_ClienteDireccionRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\entities\Direccion.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\enums\EspecieRecomendada.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\repositories\jdbc\ClienteDireccionRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\interfaces\test\TestRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\repositories\interfaces\I_ClienteRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\interfaces\utils\html\HtmlTable.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\repositories\jdbc\ClienteRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\repositories\jdbc\ArticuloRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\repositories\interfaces\I_ArticuloRepository.java
+C:\Users\Ralu\Documents\NetBeansProjects\Trabajos\TP2JSPDAO\src\main\java\trabajo\dao\enums\Tipo.java

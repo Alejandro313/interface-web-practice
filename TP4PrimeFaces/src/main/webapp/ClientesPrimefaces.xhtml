@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Clientes</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+    </h:head>
+    
+    <h:body>
+        <h:form>
+            <p:menubar>
+                <p:menuitem value="Inicio"      url="http://localhost:8080/Client/"/>
+                <p:menuitem value="Clientes"    url="http://localhost:8080/Client/faces/ClientesPrimefaces.xhtml"/>
+                <p:menuitem value="Articulos"   url="http://localhost:8080/Client/faces/ArticulosPrimefaces.xhtml"/>
+                <p:divider layout="vertical"/>
+            </p:menubar>
+        </h:form>
+        <br></br>
+        <h1>Mantenimiento de Clientes</h1>
+        <h:form>
+            <p:panelGrid columns="6">
+                <p:outputLabel value="Nombre: " />
+                <p:inputText value="#{clienteMB.cliente.nombre}" required="true" maxlength="20"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                <p:outputLabel value="Apellido: "/>
+                <p:inputText value="#{clienteMB.cliente.apellido}" required="true" maxlength="20"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Fecha Nacimiento: "/>
+                <p:datePicker value="#{clienteMB.fenaci}" style="width: 240px;" />
+                
+                <p:outputLabel value="Tipo de Documento: "/>
+                <p:selectOneMenu  value="#{clienteMB.cliente.tipoDocumento}" style="width: 248px;">
+                    <f:selectItems value="#{tipoDocumentoMB.tipoDocumentos}" var="t" 
+                                   itemLabel="#{t}"/>
+                </p:selectOneMenu>
+                
+                <p:outputLabel value="Número de Documento: "/>
+                <p:inputText value="#{clienteMB.cliente.numeroDocumento}" maxlength="8"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Teléfono: "/>
+                <p:inputText value="#{clienteMB.cliente.telefono}" maxlength="16"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Email: "/>
+                <p:inputText value="#{clienteMB.cliente.email}" maxlength="50"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Calle: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.calle}" maxlength="120"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Número"/>
+                <p:inputText value="#{clienteMB.cliente.direccion.numero}" maxlength="9"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Piso: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.piso}" maxlength="12"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Departamento: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.depto}" maxlength="12"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Torre: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.torre}" maxlength="12"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Código Postal: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.codigoPostal}" maxlength="12"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Ciudad: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.ciudad}" maxlength="50"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Provincia: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.provincia}" maxlength="50"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Pais: "/>
+                <p:inputText value="#{clienteMB.cliente.direccion.pais}" maxlength="50"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value="Comentarios: "/>
+                <p:inputText value="#{clienteMB.cliente.comentarios}" maxlength="255"  style="width: 240px;"
+                             requiredMessage="Este campo es obligatorio" />
+                
+                <p:outputLabel value=""/>
+                <p:outputLabel value="#{clienteMB.mensaje}"/>
+            </p:panelGrid>
+            
+            <p:commandButton value="Guardar" action="#{clienteMB.save()}" ajax="false" style="width: 200px;"/>
+            <p:growl id="growl" showDetail="true" />  
+        </h:form>
+        <br></br>
+        
+        <h:form>
+            <p:outputLabel for="buscarApellido" value="Buscar Apellido: "/>
+            <p:inputText id="buscarApellido" value="#{clienteMB.buscarApellido}"/>
+            
+            <p:dataTable var="c" value="#{clienteMB.likeApellido}" rows="5"
+                     paginator="true"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                     rowsPerPageTemplate="5,10,15,20,{ShowAll|'All'}">
+
+            <p:column headerText="ID">
+                <h:outputText value="#{c.id}" />
+            </p:column>
+                
+            <p:column headerText="Nombre">
+                <h:outputText value="#{c.nombre}" />
+            </p:column>
+
+            <p:column headerText="Apellido">
+                <h:outputText value="#{c.apellido}" />
+            </p:column>
+            
+            <p:column headerText="Fenaci">
+                <h:outputText value="#{c.fenaci}" />
+            </p:column>
+            
+            <p:column headerText="Tipo Documento">
+                <h:outputText value="#{c.tipoDocumento}" />
+            </p:column>
+
+            <p:column headerText="Numero Documento">
+                <h:outputText value="#{c.numeroDocumento}" />
+            </p:column>
+            
+            <p:column headerText="Email">
+                <h:outputText value="#{c.email}" />
+            </p:column>
+
+            <f:facet name="paginatorTopLeft">
+                <p:commandButton type="button" icon="pi pi-refresh"/>
+            </f:facet>
+
+            <f:facet name="paginatorBottomRight">
+                <p:commandButton type="button" icon="pi pi-cloud-upload"/>
+            </f:facet>
+
+            </p:dataTable>
+        </h:form>
+        
+    </h:body>
+</html>
+

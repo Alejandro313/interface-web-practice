@@ -1,0 +1,8 @@
+ar\org\centro8\curso\java\web\repositories\list\ClienteRepositoryFactory.class
+ar\org\centro8\curso\java\web\entities\Direccion.class
+ar\org\centro8\curso\java\web\interfaces\test\TestConnector.class
+ar\org\centro8\curso\java\web\entities\Cliente.class
+ar\org\centro8\curso\java\web\enums\TipoDocumento.class
+ar\org\centro8\curso\java\web\interfaces\connectors\Connector.class
+ar\org\centro8\curso\java\web\repositories\interfaces\I_ClienteRepository.class
+ar\org\centro8\curso\java\web\interfaces\test\TestRepository.class

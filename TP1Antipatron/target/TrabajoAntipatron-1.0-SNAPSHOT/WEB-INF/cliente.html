@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilos.css'>
+    <script src="/src/main/webapp/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">PetShop</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="cliente.html" class="nav-link">Clientes</a>
+                </li>
+
+                <li class="nav-menu-item">
+                    <a href="Articulo.html" class="nav-link">Articulos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="form" method="GET">
+        <form>
+            <table>
+                <tr><td>Nombre:             </td><td><input type="text" name="nombre"   required minlength="3" maxlength="20" style="width: 200px;" /></td></tr>
+                <tr><td>Apellido:           </td><td><input type="text" name="apellido" required minlength="3" maxlength="20" style="width: 200px;" /></td></tr>
+                <tr><td>Fecha Nacimiento:   </td><td><input type="date" name="fenaci"   required style="width: 203px;" /></td></tr>
+                <tr><td>TipoDocumento:      </td>
+                    <td>
+                        <select name="tipoDocumento" style="width: 208px;" >
+                            <option value="DNI" >DNI </option>
+                            <option value="LC"  >LC  </option>
+                            <option value="LE"  >LE  </option>
+                            <option value="CI"  >CI  </option>
+                            <option value="PASS">PASS</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td>Número Documento:   </td><td><input type="text"  name="numeroDocumento" required minlength="6" maxlength="8"  style="width: 200px;" /></td></tr>
+                <tr><td>Teléfono:           </td><td><input type="text"  name="telefono"                 minlength="8" maxlength="16" style="width: 200px;" /></td></tr>
+                <tr><td>Email:              </td><td><input type="email" name="email"                    minlength="3" maxlength="50" style="width: 200px;" /></td></tr>
+                <tr>
+                    <td>Dirección:          </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Calle:  </td><td><input type="text"     name="calle"                required    minlength="3" maxlength="120" style="width: 150px;" /></td>
+                                <td>Numero: </td><td><input type="number"   name="numero"   value="0"   required    style="width: 70px;"  /></td>
+                                <td>Piso:   </td><td><input type="text"     name="piso"                             minlength="1" maxlength="12"  style="width: 70px;"  /></td>
+                            </tr>
+                            <tr>
+                                <td>Departamento:   </td><td><input type="text" name="depto"        minlength="1" maxlength="12" style="width: 70px;" /></td>
+                                <td>Torre:          </td><td><input type="text" name="torre"        minlength="1" maxlength="12" style="width: 70px;"  /></td>
+                                <td>Código Postal:  </td><td><input type="text" name="codigoPostal" minlength="1" maxlength="12" style="width: 70px;"  /></td>
+                            </tr>
+                            <tr>
+                                <td>Ciudad:     </td><td><input type="text" name="ciudad"       value='CABA'        minlength="3" maxlength="50"   style="width: 100px;" /></td>
+                                <td>Provincia:  </td><td><input type="text" name="provincia"    value='CABA'        minlength="3" maxlength="50"   style="width: 100px;"  /></td>
+                                <td>Pais:       </td><td><input type="text" name="pais"         value='Argentina'   minlength="3" maxlength="50"   style="width: 100px;"  /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td>Comentarios:        </td><td><input type="text"  name="comentarios"     minlength="0" maxlength="255" style="width: 400px;" /></td></tr>
+                <tr>
+                    <td><input type="reset"  value="Limpiar" class="boton"/></td>
+                    <td><input type="submit" value="Enviar"  class="boton"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="form">
+        <!-- Creamos un formulario de busqueda que pueda buscar un apellido -->
+        <form>
+            Apellido: <input type="text" name="buscarApellido" value=""/>
+        </form>
+        
+        <table>
+            <!--Agregamos la tabla y sus variables-->
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha Nacimiento</th>
+                <th>Tipo Documento</th>
+                <th>Numero Documento</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Dirección</th>
+                <th>Comentarios</th>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+trabajo\dao\entities\Cliente.class
+trabajo\dao\repositories\interfaces\I_ClienteRepository.class
+trabajo\dao\enums\Tipo.class
+trabajo\dao\repositories\interfaces\I_ArticuloRepository.class
+trabajo\dao\entities\Articulo.class
+trabajo\dao\enums\TipoDocumento.class
+trabajo\dao\entities\Direccion.class
+trabajo\dao\interfaces\connectors\Connector.class
+trabajo\dao\interfaces\test\TestConnector.class
+trabajo\dao\enums\EspecieRecomendada.class
+trabajo\dao\repositories\jdbc\ClienteRepository.class
+trabajo\dao\repositories\jdbc\ArticuloRepository.class
+trabajo\dao\interfaces\test\TestRepository.class

@@ -1,0 +1,3 @@
+package trabajo.dao.enums;
+
+public enum Tipo {PRENDA,JUGUETE,ALIMENTO,SNACK,ACCESORIO,CORREAS,MEDICAMENTO}
